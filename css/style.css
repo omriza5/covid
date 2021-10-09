@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --light-grey: #e5e7ed;
+  --dark-grey: #bbc3ce;
+  --smooth-blue: #474862;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--smooth-blue);
+}
+
+.loader {
+  display: none;
+  border: 8px solid var(--smooth-blue); /* Blue */
+  background: url("../public/imgs/covid-icon.png") no-repeat center center/cover;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utils */
+.selected {
+  background: var(--smooth-blue);
+  color: #fff;
+}
+
+.dumb-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-grey);
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  background: var(--light-grey);
+  height: 95vh;
+  width: 95vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  background: #fff;
+  border-radius: 10px 0px 0px 10px;
+  padding: 1rem 0;
+}
+.side-nav-title {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.side-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-top: 3rem;
+  font-size: 3rem;
+  width: 100%;
+}
+.side-nav-list li {
+  padding: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid var(--dark-grey);
+  cursor: pointer;
+}
+
+.side-nav-list li:first-child {
+  border-top: 1px solid var(--dark-grey);
+}
+
+.side-nav-list li:hover {
+  background: var(--smooth-blue);
+  color: #fff;
+}
+.main {
+  width: 85%;
+  background: var(--light-grey);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.country {
+  display: none;
+}
+
+.continent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.continent-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.stat-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 15rem;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.select-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.select-input label {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.select-input select {
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background: #fff;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+canvas {
+  padding: 0.5rem 2rem;
+}
+
+.country .select-input select {
+  width: 15rem;
+}
+optgroup {
+  font-size: 2rem;
+}
+
+.country-title {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
+.country .content {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 20rem;
+  height: 10rem;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.card p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}

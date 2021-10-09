@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="dumb-container">
+      <div class="app-container">
+        <div class="side-nav">
+          <div class="side-nav-title">
+            <h1>Covid 19</h1>
+          </div>
+          <ul class="side-nav-list">
+            <li id="continentBtn" class="selected">By Continent</li>
+            <li id="countryBtn">By Country</li>
+          </ul>
+        </div>
+        <div class="main">
+          <div class="continent">
+            <div class="continent-buttons"></div>
+            <div class="select-input">
+              <label for="regionsSelect">Select a Continent</label>
+
+              <select name="regionsSelect" id="regionsSelect"></select>
+            </div>
+            <canvas class="graph">
+              
+            </canvasv>
+          </div>
+          <div class="country">
+            <div class="select-input">
+              <label for="countrySelect">Select a Country</label>
+
+              <select name="countrySelect" id="countrySelect"></select>
+            </div>
+            <div class="country-title">
+              <h3 class="country-name"></h3>
+            </div>
+            <div class="content">
+                <div class="card">
+                  <h1>Total Cases</h1>
+                  <p id="totalCases"></p>
+                </div>
+                <div class="card">
+                  <h1>New Cases</h1>
+                  <p id="newCases"></p>
+                </div>
+                <div class="card">
+                  <h1>Total Deaths</h1>
+                  <p id="totalDeaths"></p>
+                </div>
+                <div class="card">
+                  <h1>New Deaths</h1>
+                  <p id="newDeath"></p>
+                </div>
+                <div class="card">
+                  <h1>Total Recovered</h1>
+                  <p id="totalRecovered"></p>
+                </div>
+                <div class="card">
+                  <h1>Critical Condition</h1>
+                  <p id="criticalCondition"></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </body>
+</html>
