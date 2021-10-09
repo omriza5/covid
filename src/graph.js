@@ -58,9 +58,12 @@ const getDataByMode = (region, mode, covidData) => {
 
 const handleCountryClick = (country) => {
   const countryName = document.querySelector(".country-name");
+  const countrySelect = document.querySelector("#countrySelect");
+
   localStorage.setItem("selectedCountry", country);
   const selectedCountry = localStorage.getItem("selectedCountry");
   countryName.innerHTML = selectedCountry;
+  countrySelect.value = selectedCountry;
   showCountrySection();
   displayCountryData();
 };
